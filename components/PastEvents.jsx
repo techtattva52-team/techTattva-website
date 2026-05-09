@@ -5,7 +5,7 @@ const pastEvents = [
 ];
 export default function PastEvents() {
   return (
-    <section className="py-32 px-6">
+    <section id="eventsSection" className="py-32 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-5xl font-bold text-center mb-16">Past Events</h2>
         <div className="grid md:grid-cols-2 gap-8">

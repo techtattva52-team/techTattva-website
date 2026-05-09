@@ -5,10 +5,8 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main className="bg-[#081120] text-white overflow-hidden">
-      <Navbar />
       <Hero />
       <Stats />
-      <Footer />
     </main>
   );
 }

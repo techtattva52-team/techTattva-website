@@ -1,8 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Hero() {
+  const registerHandler = (event) => {
+    event.preventDefault();
+  };
   return (
     <section className="relative min-h-screen overflow-hidden flex items-center px-6">
       {/* Background */}
@@ -62,13 +66,18 @@ export default function Hero() {
           </p>
 
           <div className="flex gap-5 flex-wrap">
-            <button className="bg-linear-to-r from-blue-600 to-cyan-500 hover:scale-105 transition-all duration-300 px-7 py-4 rounded-full font-medium shadow-2xl shadow-blue-500/20">
+            <button
+              onClick={registerHandler}
+              className="bg-linear-to-r from-blue-600 to-cyan-500 hover:scale-105 transition-all duration-300 px-7 py-4 rounded-full font-medium shadow-2xl shadow-blue-500/20"
+            >
               Register Now
             </button>
 
-            <button className="border border-blue-500/30 hover:bg-blue-500/10 hover:border-blue-400 transition-all duration-300 px-7 py-4 rounded-full">
-              Explore Events
-            </button>
+            <Link href="/events#eventsSection">
+              <button className="border border-blue-500/30 hover:bg-blue-500/10 hover:border-blue-400 transition-all duration-300 px-7 py-4 rounded-full">
+                Explore Events
+              </button>
+            </Link>
           </div>
         </motion.div>
 

@@ -6,7 +6,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
         <div>
           <img
-            src="/images/about.jpg"
+            src="/images/about.png"
             alt="about"
             className="rounded-3xl border border-white/10"
           />
