@@ -1,9 +1,9 @@
 "use client";
-
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-
+import Logo from "@/public/images/website-logo.png";
+import Image from "next/image";
 const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
@@ -17,21 +17,30 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50">
-      {/* Blur Background */}
+    <header className="fixed top-0 left-0 w-full z-50 h-35">
       <div className="absolute inset-0 bg-black/20 backdrop-blur-xl border-b border-white/10" />
-
-      <nav className="relative max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 z-50">
-          <img
-            src="/logo/logo.png"
-            alt="logo"
-            className="w-10 h-10 object-contain"
+      <nav className="relative w-full py-1 flex items-center justify-between pr-6">
+        <Link href="/" className="flex items-center gap-2 z-50">
+          <Image
+            src={Logo}
+            alt="TechTattva Logo"
+            width={125}
+            height={125}
+            priority
+            className="object-contain drop-shadow-[0_0_12px_rgba(59,130,246,0.45)]"
           />
+          <div className="flex flex-col leading-none ml-2">
+            <span className="text-3xl font-bold tracking-wide text-white">
+              TechTattva
+            </span>
 
-          <h1 className="text-xl font-bold tracking-wide">Community</h1>
+            <span className="text-[10px] tracking-[0.25em] text-cyan-400 uppercase mt-1">
+              Innovation Club
+            </span>
+          </div>
         </Link>
 
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <Link
@@ -83,7 +92,7 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden z-50"
+          className="md:hidden z-50 text-white"
         >
           {mobileMenuOpen ? (
             <X className="w-7 h-7" />
@@ -99,7 +108,7 @@ export default function Navbar() {
             top-0
             right-0
             h-screen
-            w-70
+            w-72
             bg-[#081120]/95
             backdrop-blur-2xl
             border-l
@@ -113,7 +122,11 @@ export default function Navbar() {
             gap-8
             pt-24
             md:hidden
-            ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"}
+            ${
+              mobileMenuOpen
+                ? "translate-x-0"
+                : "translate-x-full"
+            }
           `}
         >
           {navItems.map((item) => (
@@ -142,6 +155,9 @@ export default function Navbar() {
               py-3
               rounded-full
               font-medium
+              hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]
+              transition-all
+              duration-300
             "
           >
             Register
