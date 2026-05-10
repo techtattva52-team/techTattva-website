@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-
 import "./globals.css";
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Tech Community",
-  description: "Modern Tech Community Website",
+  title: "Tech Tattva",
+  description: "A hub for tech enthusiasts to connect, learn, and innovate.",
+  icons: {
+    icon: "@/public/logo/logo.png"
+  },
 };
 
 const geistSans = Geist({

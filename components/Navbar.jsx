@@ -39,37 +39,16 @@ export default function Navbar() {
             </span>
           </div>
         </Link>
-
-        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
-              className="
-                relative
-                text-slate-300
-                hover:text-white
-                transition
-                duration-300
-                after:absolute
-                after:left-0
-                after:-bottom-1
-                after:h-0.5
-                after:w-0
-                after:bg-linear-to-r
-                after:from-blue-500
-                after:to-cyan-400
-                after:transition-all
-                after:duration-300
-                hover:after:w-full
-              "
+              className="relative text-slate-300 hover:text-white transition duration-300 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-linear-to-r after:from-blue-500 after:to-cyan-400 after:transition-all after:duration-300 hover:after:w-full"
             >
               {item.name}
             </Link>
           ))}
-
-          {/* CTA */}
           <button
             className="
               bg-linear-to-r
@@ -88,8 +67,6 @@ export default function Navbar() {
             Register
           </button>
         </div>
-
-        {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="md:hidden z-50 text-white"
@@ -100,8 +77,6 @@ export default function Navbar() {
             <Menu className="w-7 h-7" />
           )}
         </button>
-
-        {/* Mobile Menu */}
         <div
           className={`
             fixed
@@ -144,8 +119,6 @@ export default function Navbar() {
               {item.name}
             </Link>
           ))}
-
-          {/* Mobile CTA */}
           <button
             className="
               mt-4
