@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Tech Tattva",
   description: "A hub for tech enthusiasts to connect, learn, and innovate.",
   icons: {
-    icon: "@/public/logo/logo.png"
+    icon: "/website-logo.png"
   },
 };
 
@@ -34,7 +34,6 @@ export default function RootLayout({
     >
       <body className="min-h-screen bg-[#081120] text-white overflow-x-hidden flex flex-col">
         <Navbar />
-
         <main className="flex-1 pt-24">{children}</main>
         <Footer />
       </body>

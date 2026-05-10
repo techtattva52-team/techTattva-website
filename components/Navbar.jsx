@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import Logo from "@/public/images/website-logo.png";
+import Logo from "@/public/website-logo.png";
 import Image from "next/image";
 const navItems = [
   { name: "Home", href: "/" },
@@ -10,7 +10,6 @@ const navItems = [
   { name: "Events", href: "/events" },
   { name: "Team", href: "/team" },
   { name: "Gallery", href: "/gallery" },
-  { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -20,12 +19,12 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 w-full z-50 h-35">
       <div className="absolute inset-0 bg-black/20 backdrop-blur-xl border-b border-white/10" />
       <nav className="relative w-full py-1 flex items-center justify-between pr-6">
-        <Link href="/" className="flex items-center gap-2 z-50">
+        <Link href="/" className="flex items-center gap-2 z-50 ml-3">
           <Image
             src={Logo}
             alt="TechTattva Logo"
-            width={125}
-            height={125}
+            width={130}
+            height={130}
             priority
             className="object-contain drop-shadow-[0_0_12px_rgba(59,130,246,0.45)]"
           />
@@ -39,7 +38,7 @@ export default function Navbar() {
             </span>
           </div>
         </Link>
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-8 mr-5">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -49,23 +48,6 @@ export default function Navbar() {
               {item.name}
             </Link>
           ))}
-          <button
-            className="
-              bg-linear-to-r
-              from-blue-600
-              to-cyan-500
-              hover:scale-105
-              hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]
-              transition-all
-              duration-300
-              px-6
-              py-2.5
-              rounded-full
-              font-medium
-            "
-          >
-            Register
-          </button>
         </div>
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
