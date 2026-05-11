@@ -8,7 +8,7 @@ const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Events", href: "/events" },
-  { name: "Team", href: "/team" },
+  // { name: "Team", href: "/team" },
   { name: "Gallery", href: "/gallery" },
 ];
 
@@ -60,63 +60,25 @@ export default function Navbar() {
           )}
         </button>
         <div
-          className={`
-            fixed
-            top-0
-            right-0
-            h-screen
-            w-72
-            bg-[#081120]/95
-            backdrop-blur-2xl
-            border-l
-            border-white/10
-            transform
-            transition-transform
-            duration-500
-            p-8
-            flex
-            flex-col
-            gap-8
-            pt-24
-            md:hidden
-            ${
-              mobileMenuOpen
-                ? "translate-x-0"
-                : "translate-x-full"
-            }
-          `}
+          className={`fixed top-0 right-0 h-screen w-72 bg-[#081120]/95 backdrop-blur-2xl border-l border-white/10
+            transform transition-transform duration-500 p-8 flex flex-col gap-8 pt-24 md:hidden ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           {navItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="
-                text-lg
-                text-slate-300
-                hover:text-blue-400
-                transition
-              "
+              className="text-lg text-slate-300 hover:text-blue-400 transition"
             >
               {item.name}
             </Link>
           ))}
-          <button
-            className="
-              mt-4
-              bg-linear-to-r
-              from-blue-600
-              to-cyan-500
-              py-3
-              rounded-full
-              font-medium
-              hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]
-              transition-all
-              duration-300
-            "
+          {/* <button
+            className="mt-4 bg-linear-to-r from-blue-600 to-cyan-500 py-3 rounded-full font-medium hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-300"
           >
             Register
-          </button>
+          </button> */}
         </div>
       </nav>
     </header>

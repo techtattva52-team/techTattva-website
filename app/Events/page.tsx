@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, Users, Clock, Terminal, ExternalLink, Code2, Zap, Star } from "lucide-react";
@@ -21,15 +20,10 @@ export default function EventsPage() {
 
   return (
     <div className="min-h-screen bg-[#081120] text-slate-300 py-24 px-6 relative overflow-hidden font-sans">
-
-      {/* Subtle Background Elements */}
       <div className="absolute top-[20%] left-[15%] w-1.5 h-1.5 bg-cyan-500 rounded-full shadow-[0_0_15px_#06b6d4] animate-pulse" />
       <div className="absolute top-[60%] right-[15%] w-1.5 h-1.5 bg-blue-500 rounded-full shadow-[0_0_15px_#3b82f6] animate-pulse" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-900/10 rounded-full blur-[120px] pointer-events-none" />
-
       <div className="max-w-6xl mx-auto relative z-10 mt-10">
-
-        {/* HEADER */}
         <div className="text-center mb-16 flex flex-col items-center">
           <motion.div
             key={activeTab}
@@ -115,7 +109,6 @@ function EventCard({ event, isActive }: { event: TechEvent; isActive: boolean })
 
   return (
     <div className="group flex flex-col h-full bg-[#0a1526]/80 border border-slate-800 hover:border-slate-700 rounded-3xl p-8 transition-all duration-300 relative overflow-hidden">
-
       {/* Subtle hover gradient */}
       <div className="absolute inset-0 bg-linear-to-br from-blue-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
@@ -138,10 +131,6 @@ function EventCard({ event, isActive }: { event: TechEvent; isActive: boolean })
                 LIVE
               </span>
             )}
-          </div>
-          <div className="flex items-center gap-1.5 text-slate-400 text-xs font-mono mt-2">
-            <Clock className="w-3.5 h-3.5" />
-            <span>{event.time}</span>
           </div>
         </div>
       </div>
