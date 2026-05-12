@@ -31,7 +31,7 @@ export default function Hero() {
             Student Tech Community
           </p>
 
-          <h1 className="text-5xl lg:text-7xl font-bold leading-[1.1] mb-8">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] mb-8">
             Building The Future Through{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-cyan-400 to-blue-600">
               Innovation
@@ -52,7 +52,7 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        <div className="relative h-150 flex items-center justify-center perspective-[1400px]">
+        <div className="hidden md:flex relative h-150 items-center justify-center perspective-[1400px]">
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 25, repeat: Infinity, ease: "linear" }}

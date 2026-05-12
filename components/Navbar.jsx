@@ -6,10 +6,10 @@ import Logo from "@/public/website-logo.png";
 import Image from "next/image";
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/About" },
-  { name: "Events", href: "/Events" },
+  { name: "About", href: "/about" },
+  { name: "Events", href: "/events" },
   // { name: "Team", href: "/team" },
-  { name: "Gallery", href: "/Gallery" },
+  { name: "Gallery", href: "/gallery" },
 ];
 
 export default function Navbar() {
@@ -26,10 +26,10 @@ export default function Navbar() {
             width={91}
             height={91}
             priority
-            className="object-contain drop-shadow-[0_0_12px_rgba(59,130,246,0.45)]"
+            className="w-16 h-16 md:w-[91px] md:h-[91px] object-contain drop-shadow-[0_0_12px_rgba(59,130,246,0.45)]"
           />
           <div className="flex flex-col leading-none ml-2">
-            <span className="text-3xl font-bold tracking-wide text-white">
+            <span className="text-xl md:text-3xl font-bold tracking-wide text-white">
               TechTattva
             </span>
 
