@@ -16,15 +16,15 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 h-35">
+    <header className="fixed top-0 left-0 w-full z-50 h-25">
       <div className="absolute inset-0 bg-black/20 backdrop-blur-xl border-b border-white/10" />
       <nav className="relative w-full py-1 flex items-center justify-between pr-6">
         <Link href="/" className="flex items-center gap-2 z-50 ml-3">
           <Image
             src={Logo}
             alt="TechTattva Logo"
-            width={130}
-            height={130}
+            width={91}
+            height={91}
             priority
             className="object-contain drop-shadow-[0_0_12px_rgba(59,130,246,0.45)]"
           />
