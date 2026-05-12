@@ -6,10 +6,10 @@ import Logo from "@/public/website-logo.png";
 import Image from "next/image";
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Events", href: "/events" },
+  { name: "About", href: "/About" },
+  { name: "Events", href: "/Events" },
   // { name: "Team", href: "/team" },
-  { name: "Gallery", href: "/gallery" },
+  { name: "Gallery", href: "/Gallery" },
 ];
 
 export default function Navbar() {
